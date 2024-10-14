@@ -1,1 +1,1 @@
-# README is not availabel
+# README is not available
