@@ -1,0 +1,25 @@
+:root {
+  --color-main: #eb2f64;
+  --color-main-light: #ff3366;
+  --color-main-dark: #ba265d;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --box-shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --box-shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+$main-font-family: "Open Sans", sans-serif;
+$bp-1200px: 75em;
+$bp-1100px: 68.75em;
+$bp-900px: 56.25em;
+$bp-600px: 37.5em;
+$bp-500px: 31.25em;

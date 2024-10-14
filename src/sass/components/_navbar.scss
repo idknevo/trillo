@@ -1,0 +1,99 @@
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%;
+  padding: 3.5rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media only screen and (max-width: $bp-900px) {
+    padding: 0;
+  }
+}
+
+.side-nav {
+  list-style: none;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  @media only screen and (max-width: $bp-900px) {
+    flex-direction: row;
+  }
+
+  &__item {
+    position: relative;
+    @media only screen and (max-width: $bp-900px) {
+      flex: 1;
+    }
+    &::before {
+      content: "";
+      width: 3px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--color-main);
+      transform: scaleY(0);
+      transition: transform 0.3s, width 0.4s 0.2s cubic-bezier(1, 0, 0, 1),
+        background-color 0.1s;
+    }
+
+    &:hover::before,
+    &--active::before {
+      transform: scaleY(1);
+      width: 100%;
+    }
+
+    &:active::before {
+      background-color: var(--color-main-light);
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    position: relative;
+    z-index: 10;
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 3rem;
+    @media only screen and (max-width: $bp-900px) {
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-600px) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
+      gap: 0.7rem;
+    }
+  }
+
+  &__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: currentColor;
+    @media only screen and (max-width: $bp-600px) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  padding: 0 2.5rem;
+  text-align: center;
+  @media only screen and (max-width: $bp-900px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-grey-dark-1);
+    width: 100%;
+    padding: 2rem 0;
+  }
+}

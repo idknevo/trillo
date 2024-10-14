@@ -1,0 +1,73 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  height: 8rem;
+  background-color: #fff;
+  border-bottom: var(--line);
+  @media only screen and (max-width: $bp-500px) {
+    height: 11rem;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
+
+  .search {
+    flex: 0 0 40%;
+    @media only screen and (max-width: $bp-500px) {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2);
+    }
+  }
+
+  &__logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-self: stretch;
+
+  & > * {
+    cursor: pointer;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    &:hover {
+      background-color: var(--color-grey-light-2);
+    }
+  }
+  &__icon-box {
+    position: relative;
+  }
+  &__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    fill: var(--color-grey-dark-2);
+  }
+  &__notification {
+    font-size: 0.8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-main);
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: grid;
+    place-content: center;
+  }
+  &__user {
+    gap: 1rem;
+  }
+  &__user-photo {
+    width: 3.75rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+}
