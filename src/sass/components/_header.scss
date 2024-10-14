@@ -63,6 +63,7 @@
     place-content: center;
     @media only screen and (max-width: $bp-500px) {
       top: 0;
+      font-size: 1rem;
     }
   }
   &__user {

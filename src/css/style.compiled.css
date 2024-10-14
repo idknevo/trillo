@@ -215,6 +215,12 @@ body {
   display: grid;
   place-content: center;
 }
+@media only screen and (max-width: 31.25em) {
+  .user-nav__notification {
+    top: 0;
+    font-size: 1rem;
+  }
+}
 .user-nav__user {
   gap: 1rem;
 }
